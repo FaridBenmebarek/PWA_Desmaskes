@@ -2,7 +2,7 @@ const webPush = require('web-push');
 // const pushServerKeys = require('./pushServerKeys');
 const pushClientSubscription = require('./pushClientSubscription.json');
 
-webPush.setVapidDetails('mailto:contact@hotmail.fr', 'BOUs8nTqqFgLYGOZ9oYtNhFpZUrMdJpNiuSJcJCNNwSWFzcsiV2zFOFc2Vm0sgi9Ee1dU2CjPO9V3hM--124zqY', 'll59ast1YT5q5fUD7goFP5FiGF1tZvZzE1gL7VFJZ3Y');
+webPush.setVapidDetails('mailto:contact@hotmail.fr', 'BKJaxDRwy/PzeeLwRGwSL18nzaAADcqLG0fZeu4+WqciJSKgoGqtWyLgYVNOjoD9o+IKU76zTH5HlQw7yqyXu8M=', 'o7kU9X2Hbb/OqldWERow7A==');
 
 const subscription = {
     endpoint: pushClientSubscription.endpoint,
