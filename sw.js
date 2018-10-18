@@ -72,7 +72,8 @@ self.addEventListener('fetch', evt => {
 // --------------------------------------------------------------------------
 //Notifications
 self.registration.showNotification('Notif depuis le sw', {
-    body: 'je suis une notification dite "persistante"',
+    body: 'Tu vas faire une Cheb ce soir?',
+    icon: "images/biche.jpg",
     actions: [
         {action: 'accept', title: 'accepter'},
         {action: 'refuse', title: 'refuser'}
@@ -97,21 +98,21 @@ self.addEventListener('notificationclick', evt => {
 
 //Push Notification
 
-self.addEventListener('push', function(event) {
-    console.log('[Service Worker] Push Received.');
-    console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
-
-    const title = 'Pour Maxime';
-    const options = {
-        body: 'A quand un Jambon Beurre ?',
-        icon: 'images/icon.png',
-        badge: 'images/badge.png'
-    };
-
-    const notificationPromise = self.registration.showNotification(title, options);
-    event.waitUntil(notificationPromise);
-
-});
+// self.addEventListener('push', function(event) {
+//     console.log('[Service Worker] Push Received.');
+//     console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+//
+//     const title = 'Pour Maxime';
+//     const options = {
+//         body: 'A quand un Jambon Beurre ?',
+//         icon: 'images/icon.png',
+//         badge: 'images/badge.png'
+//     };
+//
+//     const notificationPromise = self.registration.showNotification(title, options);
+//     event.waitUntil(notificationPromise);
+//
+// });
 
 //Background Sync
 self.addEventListener('sync', event => {
