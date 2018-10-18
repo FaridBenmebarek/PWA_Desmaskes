@@ -71,9 +71,9 @@ self.addEventListener('fetch', evt => {
 });
 // --------------------------------------------------------------------------
 //Notifications
-self.registration.showNotification('Notif depuis le sw', {
-    body: 'Tu vas faire une Cheb ce soir?',
-    icon: "images/biche.jpg",
+self.registration.showNotification('Tournoi Magic ce soir !', {
+    body: 'A partir de 18h ce soir, 20 places disponibles, cashprize de 5000€ !!! ',
+    icon: "images/magic.png",
     actions: [
         {action: 'accept', title: 'accepter'},
         {action: 'refuse', title: 'refuser'}
