@@ -1,20 +1,20 @@
-const technosDiv = document.querySelector('#technos');
+// const technosDiv = document.querySelector('#technos');
 
-function loadTechnologies() {
-    fetch('http://localhost:3001/technos')
-        .then(response => {
-            response.json()
-                .then(technos => {
-                    const allTechnos = technos.map(t => `<div id="taille-police"><b>${t.name}</b> ${t.description}  <a href="${t.url}">site de ${t.name}</a> </div>`)
-                        .join('');
+// function loadTechnologies() {
+//     fetch('http://localhost:3001/technos')
+//         .then(response => {
+//             response.json()
+//                 .then(technos => {
+//                     const allTechnos = technos.map(t => `<div id="taille-police"><b>${t.name}</b> ${t.description}  <a href="${t.url}">site de ${t.name}</a> </div>`)
+//                         .join('');
+//
+//                     technosDiv.innerHTML = allTechnos;
+//                 });
+//         })
+//         .catch(console.error);
+// }
 
-                    technosDiv.innerHTML = allTechnos;
-                });
-        })
-        .catch(console.error);
-}
-
-loadTechnologies(technos);
+// loadTechnologies(technos);
 
 if(navigator.serviceWorker) {
     navigator.serviceWorker.register('sw.js')

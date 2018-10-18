@@ -1,4 +1,4 @@
-const cacheName = 'veille-techno-v1.1';
+const cacheName = 'des-maskes-v1.0';
 
 self.addEventListener('install', (evt) => {
     console.log(`sw installé à ${new Date().toLocaleTimeString()}`);

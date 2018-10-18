@@ -1,8 +1,8 @@
 {
-  "name": "Veille Tecnho",
-  "short_name": "VTechno",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "name": "Les Dés Maskés",
+  "short_name": "Les Dés Maskés",
+  "theme_color": "#ff9900",
+  "background_color": "#ff9900",
   "display": "standalone",
   "scope": ".",
   "start_url": ".",
