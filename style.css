@@ -1,6 +1,6 @@
 body {
     background-image: linear-gradient(#48e0e4, #bcdbdf);
-    margin: 0 0 15% 0;
+    margin: 20% 0 15% 0;
 }
 #taille-police{
     font-size: 13px;
@@ -31,6 +31,10 @@ body {
     box-shadow:         0px 4px 5px 0px rgba(50, 50, 50, 0.75);
     font-weight: bold;
     background-color: #ff9900;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 333;
 }
 .navbar, .titre, .navbar-brand {
     color: white;
@@ -48,6 +52,5 @@ footer {
     box-shadow:         0px -4px 5px 0px rgba(50, 50, 50, 0.75);
 
 }
-.container, .accueil {
-
+#page-top, .container, .accueil {
 }
