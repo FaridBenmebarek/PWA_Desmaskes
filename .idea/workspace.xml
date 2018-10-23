@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aeb2587-181d-4235-b3ef-2f85d8207200" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/actu.html" beforeDir="false" afterPath="$PROJECT_DIR$/actu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_techno.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_techno.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apropos.html" beforeDir="false" afterPath="$PROJECT_DIR$/apropos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boutique.html" beforeDir="false" afterPath="$PROJECT_DIR$/boutique.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/jeu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jeu.html" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -146,7 +139,7 @@
         <counts>
           <entry key="html" value="7" />
           <entry key="ico" value="1" />
-          <entry key="js" value="5" />
+          <entry key="js" value="6" />
           <entry key="json" value="1" />
           <entry key="png" value="1" />
         </counts>
@@ -156,18 +149,18 @@
           <entry key="HTML" value="7" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="5" />
+          <entry key="JavaScript" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="227" />
+          <entry key="html" value="251" />
           <entry key="js" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="227" />
+          <entry key="HTML" value="251" />
           <entry key="JavaScript" value="81" />
         </counts>
       </usages-collector>
@@ -193,11 +186,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jeu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/js/jeu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="759">
+              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -211,11 +213,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="107" column="24" lean-forward="true" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+            <state relative-caret-position="250">
+              <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -276,9 +278,10 @@
         <option value="$PROJECT_DIR$/add_techno.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/apropos.html" />
-        <option value="$PROJECT_DIR$/jeu.html" />
         <option value="$PROJECT_DIR$/actu.html" />
         <option value="$PROJECT_DIR$/boutique.html" />
+        <option value="$PROJECT_DIR$/dist/js/jeu.js" />
+        <option value="$PROJECT_DIR$/jeu.html" />
       </list>
     </option>
   </component>
@@ -297,8 +300,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="197" />
-    <option name="width" value="1730" />
+    <option name="x" value="769" />
+    <option name="width" value="1158" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -331,6 +334,17 @@
             <path>
               <item name="PwaDesmaskes" type="b2602c69:ProjectViewProjectNode" />
               <item name="PwaDesmaskes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PwaDesmaskes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PwaDesmaskes" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PwaDesmaskes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PwaDesmaskes" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -425,12 +439,12 @@
       <workItem from="1539623472385" duration="3994000" />
       <workItem from="1539689965249" duration="25810000" />
       <workItem from="1539847348976" duration="8892000" />
-      <workItem from="1540285756602" duration="8668000" />
+      <workItem from="1540285756602" duration="9872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70528000" />
+    <option name="totallyTimeSpent" value="71732000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -442,10 +456,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="197" y="0" width="1730" height="1047" extended-state="0" />
+    <frame x="769" y="0" width="1158" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26076555" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39636365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -637,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jeu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/actu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1081">
@@ -667,8 +674,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sw.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="107" column="24" lean-forward="true" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+        <state relative-caret-position="250">
+          <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/jeu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jeu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
