@@ -71,31 +71,31 @@ self.addEventListener('fetch', evt => {
 });
 // --------------------------------------------------------------------------
 //Notifications
-function notif() {
-    self.registration.showNotification('Tournoi Magic ce soir !', {
-        body: 'A partir de 18h ce soir, 20 places disponibles, cashprize de 5000€ !!! ',
-        icon: "images/magic.png",
-        actions: [
-            {action: 'accept', title: 'accepter'},
-            {action: 'refuse', title: 'refuser'}
-        ]
-    });
+self.registration.showNotification('Tournoi Magic ce soir !', {
+    body: 'A partir de 18h ce soir, 20 places disponibles, cashprize de 5000€ !!! ',
+    icon: "images/magic.png",
+    actions: [
+        {action: 'accept', title: 'accepter'},
+        {action: 'refuse', title: 'refuser'}
+    ]
+});
 
-    self.addEventListener('notificationclose', evt => {
-        console.log('notification fermée', evt);
-    });
+self.addEventListener('notificationclose', evt => {
+    console.log('notification fermée', evt);
+});
 
-    self.addEventListener('notificationclick', evt => {
-        if (evt.action === 'accept') {
-            console.log('vous avez accepté');
-        } else if (evt.action === 'refuse') {
-            console.log('vous avez refusé')
-        } else {
-            console.log('vous avez cliqué sur la notification (pas sur un des boutons)')
-        }
-        evt.notification.close();
-    });
-}
+self.addEventListener('notificationclick', evt => {
+    if (evt.action === 'accept') {
+        console.log('vous avez accepté');
+    } else if (evt.action === 'refuse') {
+        console.log('vous avez refusé')
+    } else {
+        console.log('vous avez cliqué sur la notification (pas sur un des boutons)')
+    }
+    evt.notification.close();
+});
+
+
 // --------------------------------------------------------------------------
 
 //Push Notification
