@@ -5,19 +5,14 @@ self.addEventListener('install', (evt) => {
     const cachePromise = caches.open(cacheName).then(cache => {
         return cache.addAll([
             'index.html',
+            'apropos.html',
             'actu.html',
             'jeu.html',
-            'apropos.html',
-            'boutique.html',
             'idb.js',
-            'database.js',
             'main.js',
             'style.css',
+            "paysage.css",
             'vendors/bootstrap4.min.css',
-            'add_techno.html',
-            'add_techno.js',
-            'contact.html',
-            'contact.js',
         ])
             .then(console.log('cache initialisé'))
             .catch(console.err);
@@ -71,81 +66,78 @@ self.addEventListener('fetch', evt => {
 });
 // --------------------------------------------------------------------------
 //Notifications
-self.registration.showNotification('Tournoi Magic ce soir !', {
-    body: 'A partir de 18h ce soir, 20 places disponibles, cashprize de 5000€ !!! ',
-    icon: "images/magic.png",
-    actions: [
-        {action: 'accept', title: 'accepter'},
-        {action: 'refuse', title: 'refuser'}
-    ]
-});
-
-self.addEventListener('notificationclose', evt => {
-    console.log('notification fermée', evt);
-});
-
-self.addEventListener('notificationclick', evt => {
-    if (evt.action === 'accept') {
-        console.log('vous avez accepté');
-    } else if (evt.action === 'refuse') {
-        console.log('vous avez refusé')
-    } else {
-        console.log('vous avez cliqué sur la notification (pas sur un des boutons)')
-    }
-    evt.notification.close();
-});
-
-
+// self.registration.showNotification('Notif depuis le sw', {
+//     body: 'je suis une notification dite "persistante"',
+//     actions: [
+//         {action: 'accept', title: 'accepter'},
+//         {action: 'refuse', title: 'refuser'}
+//     ]
+// });
+//
+// self.addEventListener('notificationclose', evt => {
+//     console.log('notification fermée', evt);
+// });
+//
+// self.addEventListener('notificationclick', evt => {
+//     if(evt.action === 'accept') {
+//         console.log('vous avez accepté');
+//     } else if(evt.action === 'refuse') {
+//         console.log('vous avez refusé')
+//     } else {
+//         console.log('vous avez cliqué sur la notification (pas sur un des boutons)')
+//     }
+//     evt.notification.close();
+// });
 // --------------------------------------------------------------------------
 
 //Push Notification
 
-// self.addEventListener('push', function(event) {
-//     console.log('[Service Worker] Push Received.');
-//     console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
-//
-//     const title = 'Pour Maxime';
-//     const options = {
-//         body: 'A quand un Jambon Beurre ?',
-//         icon: 'images/icon.png',
-//         badge: 'images/badge.png'
-//     };
-//
-//     const notificationPromise = self.registration.showNotification(title, options);
-//     event.waitUntil(notificationPromise);
-//
-// });
+self.addEventListener('push', function(event) {
+    console.log('[Service Worker] Push Received.');
+    console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+
+    const title = 'Pour Maxime';
+    const options = {
+        body: 'A quand un Jambon Beurre ?',
+        icon: 'images/icon.png',
+        badge: 'images/badge.png'
+    };
+
+    const notificationPromise = self.registration.showNotification(title, options);
+    event.waitUntil(notificationPromise);
+
+});
 
 //Background Sync
-self.addEventListener('sync', event => {
-    if (event.tag === 'sync-technos') {
-        console.log('attempting sync', event.tag);
-        console.log('syncing', event.tag);
-        event.waitUntil(
-            getAllTechnos().then(technos => {
-
-                console.log('got technos from sync callback', technos);
-
-                const unsynced = technos.filter(techno => techno.unsynced);
-
-                console.log('pending sync', unsynced);
-
-                return Promise.all(unsynced.map(techno => {
-                    console.log('Attempting fetch', techno);
-                    fetch('http://localhost:3001/technos', {
-                        headers: {
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json'
-                        },
-                        method: 'POST',
-                        body: JSON.stringify(techno)
-                    })
-                        .then(() => {
-                            console.log('Sent to server');
-                            return putTechno(Object.assign({}, techno, { unsynced: false }), techno.id);
-                        })
-                }))
-            })
-        )
-    }
-});
+// self.addEventListener('sync', event => {
+//     if (event.tag === 'sync-technos') {
+//         console.log('attempting sync', event.tag);
+//         console.log('syncing', event.tag);
+//         event.waitUntil(
+//             getAllTechnos().then(technos => {
+//
+//                 console.log('got technos from sync callback', technos);
+//
+//                 const unsynced = technos.filter(techno => techno.unsynced);
+//
+//                 console.log('pending sync', unsynced);
+//
+//                 return Promise.all(unsynced.map(techno => {
+//                     console.log('Attempting fetch', techno);
+//                     fetch('https://nodetestapi-thyrrtzgdz.now.sh/technos', {
+//                         headers: {
+//                             'Accept': 'application/json',
+//                             'Content-Type': 'application/json'
+//                         },
+//                         method: 'POST',
+//                         body: JSON.stringify(techno)
+//                     })
+//                         .then(() => {
+//                             console.log('Sent to server');
+//                             return putTechno(Object.assign({}, techno, { unsynced: false }), techno.id);
+//                         })
+//                 }))
+//             })
+//         )
+//     }
+// });
